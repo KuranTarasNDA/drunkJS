@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ACORDEON</title>
+
+    <!-- STYLES -->
+    <style>
+
+
+        /*LESSON 1*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .button {
+            width: 50px;
+            height: 50px;
+            background: red;
+            cursor: pointer;
+            margin: 50px auto 0 auto;
+        }
+        .container {
+            --transition: .5s;
+            height: 0px;
+            overflow: hidden;
+            transition-duration: var(--transition) ;
+            background: gold;
+            transform: scaleX(1);
+        }
+        li:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        li {
+            font-family: 'Arial Black', sans-serif;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-100%);
+            transition-duration: .4s;
+        }
+        .li_active {
+            transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
+        }
+        .block {
+            height: 100vh;
+            border: 3px solid red;
+        }
+
+
+        /*LESSON 2*/
+
+        .lesson-2 ul {
+            height: auto;
+
+        }
+        .lesson-2 li {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0);
+        }
+    </style>
+
+</head>
+<body>
+<!-- first lesson -->
+<div class="block lesson-1">
+    <div class="button">
+    </div>
+    <div class="container">
+        <ul>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+    </div>
+</div>
+<!-- second lesson -->
+<div class="block lesson-2">
+    <input type="text">
+    <input type="text">
+</div>
+<!-- jQuery -->
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<!-- Our scripts -->
+<script>
+    // window.addEventListener('load' , function (){
+    //
+    // let btn = document.querySelector('.button')
+    // let cont = document.querySelector('.container')
+    // let height = cont.scrollHeight
+    // let li = document.querySelectorAll('li');
+    // let liLength = li.length
+    // const time = 200;
+    // let click = false;
+    // let getProperty = getComputedStyle(cont).getPropertyValue('--transition');
+    // let timeTransition = getProperty.split('s')[0] * 1000
+    //     btn.addEventListener('click', () => {
+    //     if(!click){
+    //         cont.classList.toggle('active')
+    //         if (cont.classList.contains('active')) {
+    //             cont.style.height = height + 'px'
+    //             setTimeout(() => {
+    //
+    //                 li.forEach((item, index) => {
+    //                     setTimeout(() => {
+    //                         item.classList.add('li_active')
+    //                     }, index*time)
+    //                 })
+    //
+    //             }, timeTransition)
+    //         } else {
+    //             li.forEach((item, index) => {
+    //                 setTimeout(() => {
+    //                     item.classList.remove('li_active')
+    //                     if (li[li.length-1].classList.contains('li_active')) {
+    //
+    //                     } else {
+    //                         setTimeout(() => {
+    //                             cont.style.height = '0px'
+    //                         }, time)
+    //
+    //                     }
+    //                 }, index*time)
+    //
+    //             })
+    //
+    //         }
+    //         click = true;
+    //         setTimeout(() =>{
+    //             click = false;
+    //         },(time * liLength -1) + timeTransition)
+    //     }
+    //
+    //
+    // })
+    // })
+
+
+
+    // $('li').each(function (index) {
+    //     let text = $(this).text()
+    //
+    //     $(this).hover(
+    //         function () {
+    //             $(this).text('hover na zalupi')
+    //         }, function () {
+    //             $(this).text(text)
+    //         }
+    //     )
+    // })
+
+    $('input').each( function () {
+        let sum = $(this)
+    })
+</script>
+</body>
+</html>
